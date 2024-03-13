@@ -1,0 +1,37 @@
+result = [str(num) for num in sequence if num < X]
+
+물론, 다음 라인을 자세히 설명해 드리겠습니다:
+
+```python
+result = [str(num) for num in sequence if num < X]
+```
+[실행문장 for 변수 in iterable자료형 ]
+
+이 코드는 리스트 컴프리헨션(List Comprehension)을 사용하여
+새로운 리스트인 `result`를 생성하는 역할을 합니다.
+여기서 `[...]` 안의 표현식은 새로운 리스트의 각 요소를 정의하고,
+조건문 `if num < X`는 필터링 조건을 정의합니다.
+
+세부 설명은 다음과 같습니다:
+
+1. `for num in sequence`: `sequence` 리스트의 각 원소를 순회하면서
+ `num` 변수에 할당합니다. 이렇게 하면 `sequence` 리스트의 모든 원소를
+  하나씩 가져오면서 반복문을 실행합니다.
+
+2. `if num < X`: 각 `num` 값에 대해 조건을 확인합니다. 
+`num`이 `X`보다 작은 경우에만 다음 단계로 진행합니다.
+
+3. `str(num)`: 각 `num` 값을 문자열로 변환합니다. 
+이렇게 하면 정수를 문자열로 변환하여 리스트에 포함됩니다.
+
+4. 전체 표현식 `[str(num) for num in sequence if num < X]`은
+ `sequence` 리스트의 각 원소에 대해 조건을 검사하고, 조건을 만족하는 
+ 경우에만 해당 원소를 문자열로 변환하여 새로운 리스트를 생성합니다.
+
+5. 생성된 리스트인 `result`는 X보다 작은 숫자들의
+ 문자열로 이루어진 리스트가 됩니다.
+
+result=[str(num) for num in sequence if num<X]
+result2=['test' for num in sequence if num<X]
+print(result)#['1', '4', '2', '3']
+print(result2)#['test', 'test', 'test', 'test']

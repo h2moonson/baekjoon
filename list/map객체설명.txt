@@ -1,0 +1,10 @@
+map 객체는 파이썬에서 순회 가능한(iterable) 객체이지만, 
+리스트나 튜플과 같은 시퀀스(sequence) 타입이 아니기 때문에 
+인덱스를 사용하여 원소에 직접 접근할 수 없습니다. 
+따라서 print(t_list[3])와 같이 map 객체에 대한 인덱싱을 시도하면
+"map object is not subscriptable" 오류가 발생합니다.
+
+map 객체를 리스트로 변환하여 원소에 인덱싱을 사용할 수 있습니다. 
+예를 들어:
+t_list = list(map(int, input().split()))
+print(t_list[3])  # 리스트로 변환한 후에는 원소에 인덱싱 가능

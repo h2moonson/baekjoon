@@ -1,0 +1,6 @@
+for i in range (len(baskets)):
+    print(baskets[i], end=" ")
+    if i==len(baskets)-1:
+        print(" ")
+print(*baskets) #한줄 출력가능 
+print(*sorted(baskets))
